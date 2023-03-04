@@ -13,9 +13,9 @@ const style = {
   btn: " px-8 md:px-6 py-3 md:py-4 transition duration-[200ms] max-w-fit mx-auto md:mx-0 ",
   arrow: `text-xl`,
   btnContainer:
-    "cursor-pointer hover:opacity-[0.9]  mx-auto md:mx-0 my-2 flex items-center justify-start bg-white   text-gray-900 w-[80%] md:w-[30%] lg:w-[20%] px-4",
+    "cursor-pointer hover:opacity-[0.9]  mx-auto md:mx-0 my-2 flex items-center justify-start bg-white   text-gray-900  px-4",
   mainContent:
-    "w-[100%] md:w-[65%] h-[80%] flex flex-col items-start justify-center  mx-auto font1 my-12   md:my-24",
+    "w-[100%] md:w-[65%] h-[80%] flex flex-col items-start justify-center  mx-auto font1 my-16 md:my-7",
   input:
     "mb-3 md:mb-4 border-b-2 border-stone-500 w-[100%] ring-none outline-none",
   label: "mt-3 md:mt-4",
@@ -32,7 +32,7 @@ const Home = (props) => {
     background-size: cover;
     background-position: center;
     background-attachment: auto;
-    height: ${width < 550 ? "150vh" : "110vh"};
+    height: ${width < 550 ? "170vh" : "110vh"};
     width: 100vw;
   `;
   const onScroll = (val) => {
@@ -45,7 +45,7 @@ const Home = (props) => {
     <Animator className={style.wrapper} style={{ fontFamily: "Poppins,serif" }}>
       <FeaturedBackground1 className="flex flex-col items-center">
         <Navbar onScroll={onScroll} />
-        <div className="flex items-center justify-center w-[95%] md:w-[80%] flex-col md:flex-row py-24 md:py-16 lg:py-12 md:py-4">
+        <div className="flex items-center sm:items-start justify-center w-[95%] md:w-[80%] flex-col md:flex-row py-12 md:py-4 lg:py-4 md:py-4">
           <div className={style.mainContent}>
             <h2 className={style.heading}>
               be proud, be you - <span className="text-white">Mintstudio</span>
@@ -67,7 +67,7 @@ const Home = (props) => {
             </div>
           </div>
           {/* adding the form */}
-          <div className="w-[95%] md:w-[55%] lg:w-[40%] bg-white rounded-md px-4 md:px-8 py-12 md:py-6 lg:py-12 flex flex-col ">
+          <div className="w-[95%] md:w-[60%] lg:w-[55%] bg-white rounded-md px-4 md:px-8 py-12 md:py-6 lg:py-6 flex flex-col ">
             <h2 className="font1 font-semibold text-center text-2xl md:text-2xl">
               Ontvang snel een offerte
               <span className="text-pink-700"> Vandaag </span>{" "}

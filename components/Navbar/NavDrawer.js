@@ -90,7 +90,7 @@ const NavDrawer = (props) => {
             className="px-2 my-1 flex items-center justify-between w-[100vw]"
           >
             <div className="w-[15%]">
-              {
+              {/* {
                 <svg
                   viewBox="0 0 100 80"
                   width="30"
@@ -101,7 +101,7 @@ const NavDrawer = (props) => {
                   <rect y="30" width="100" height="20"></rect>
                   <rect y="60" width="100" height="20"></rect>
                 </svg>
-              }
+              } */}
             </div>
             <div>
               <img src={"/logo.png"} height={100} width={100} />

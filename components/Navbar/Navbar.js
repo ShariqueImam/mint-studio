@@ -30,7 +30,7 @@ const Navbar = (props) => {
       <nav className={style.mainNav}>
         <div className={style.img}>
           <Link href="/">
-            <Image src={"/logo.png"} height={150} width={150} />
+            <Image src={"/logo.png"} height={100} width={100} />
           </Link>
         </div>
         <div className="flex items-center justify-center font1 ">
