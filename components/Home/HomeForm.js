@@ -19,13 +19,10 @@ const HomeForm = () => {
   };
 
   const [Name, setName] = useState("");
-  const [Address, setAddress] = useState("");
   const [Phone, setPhone] = useState("");
   const [Email, setEmail] = useState("");
   const router = useRouter();
-  const addressChangeHandler = (e) => {
-    setAddress(e.target.value);
-  };
+
   const nameChangeHandler = (e) => {
     setName(e.target.value);
   };
@@ -48,7 +45,6 @@ const HomeForm = () => {
               createdAt: new Date().toISOString(),
               name: Name,
               email: Email,
-              address: Address,
               phone: Phone,
             },
           },
@@ -65,16 +61,6 @@ const HomeForm = () => {
   };
   return (
     <section className="flex flex-col items-start">
-      <label htmlFor="1" className={style.label}>
-        Adres
-      </label>
-      <input
-        type="text"
-        className={style.input}
-        onChange={addressChangeHandler}
-        value={Address}
-        // key="1"
-      />
       <label htmlFor="2" className={style.label}>
         Naam
       </label>
@@ -115,7 +101,6 @@ const HomeForm = () => {
       >
         Ontvang mijn offerte
       </button>
-
     </section>
   );
 };
