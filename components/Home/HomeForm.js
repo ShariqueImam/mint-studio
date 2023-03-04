@@ -21,6 +21,7 @@ const HomeForm = () => {
   const [Name, setName] = useState("");
   const [Phone, setPhone] = useState("");
   const [Email, setEmail] = useState("");
+  const [isAllFilled, setisAllFilled] = useState(true);
   const router = useRouter();
 
   const nameChangeHandler = (e) => {
@@ -35,6 +36,11 @@ const HomeForm = () => {
   const tokenWithWriteAccess =
     "skmhtHPLjRsHi6wvZALxgdAGzGX90jKTWTegYSBRnEEPXsfojk255N8f69hhqkRpw8yjoCtgkgscwu88n8LXaP60Fum8gspkNBONEN0FCRRc2qdwTkI6OugZX8v9HE9fIbx3QDdz3UUga56uf1rFZflWBMQeeu7vmmgLx0K9HlMimZHQ9CHn";
   const sendData = async () => {
+    if (Name == "" || Email == "" || Phone == "") {
+      setisAllFilled(false);
+      return;
+    }
+    setisAllFilled(true);
     const { data } = await axios.post(
       `https://qhb9gr5x.api.sanity.io/v2021-06-07/data/mutate/production?returnIds=true`,
       {
@@ -91,6 +97,11 @@ const HomeForm = () => {
         value={Phone}
         // key="4"
       />
+      {!isAllFilled && (
+        <p className="text-red-500 text-sm my-3">
+          * Please fill all the details above
+        </p>
+      )}
       <p className="text-xs font1">
         Ik ga ermee akkoord dat er contact met mij wordt opgenomen op de
         hierboven verstrekte gegevens
