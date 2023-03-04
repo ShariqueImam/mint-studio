@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.font {
+  font-family: "Poppins", sans-serif;
+}
+
+.font1 {
+  font-family: "Montserrat", sans-serif;
+}
