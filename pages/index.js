@@ -33,7 +33,7 @@ export default function Main() {
           <link rel="icon" href="/logo.png" />
         </Head>
         <div className="contact">
-          <Home onScroll={onScroll} />
+          <Home />
         </div>
         <div className="aboutus">
           {/* <About onScroll={onScroll} /> */}

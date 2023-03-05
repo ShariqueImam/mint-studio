@@ -56,7 +56,7 @@ const NavDrawer = (props) => {
             <img src={"/logo.png"} height={100} width={100} />
           </div>{" "}
           {/* adding the navs */}
-          <ul className="flex  flex-col">
+          {/* <ul className="flex  flex-col">
             <li className={style.list} onClick={() => props.onScroll("home")}>
               HOME
             </li>
@@ -69,7 +69,7 @@ const NavDrawer = (props) => {
             <li className={style.list} onClick={() => props.onScroll("investments")}>
               INVESTMENTS
             </li>
-          </ul>
+          </ul> */}
           <div>
             <button className="mx-auto bg-white rounded text-gray-900 px-12 py-2 mt-80  cursor-pointer hover:opacity-[0.9]">
               CONTACT

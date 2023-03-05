@@ -20,9 +20,9 @@ const Navbar = (props) => {
   };
   const [Enter, setEnter] = useState(false);
   const [Item, setItem] = useState("home");
-  props.onScroll(Item);
+  // props.onScroll(Item);
   const handleScroll = (val) => {
-    setItem(val);
+    // setItem(val);
   };
   return (
     // install the mui first
@@ -65,7 +65,7 @@ const Navbar = (props) => {
         </div>
       </nav>
       <div className={style.navDrawer}>
-        <NavDrawer onScroll={handleScroll} />
+        <NavDrawer  />
       </div>
     </div>
   );

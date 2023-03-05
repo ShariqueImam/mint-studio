@@ -32,19 +32,16 @@ const Home = (props) => {
     background-size: cover;
     background-position: center;
     background-attachment: auto;
-    height: ${width < 550 ? "170vh" : "110vh"};
+    height: ${width < 550 ? "190vh" : "110vh"};
     width: 100vw;
   `;
-  const onScroll = (val) => {
-    // props.onScroll(val);
-  };
   const sendEmail = (e) => {
     e.preventDefault();
   };
   return (
     <Animator className={style.wrapper} style={{ fontFamily: "Poppins,serif" }}>
       <FeaturedBackground1 className="flex flex-col items-center">
-        <Navbar onScroll={onScroll} />
+        <Navbar />
         <div className="flex items-center sm:items-start justify-center w-[95%] md:w-[80%] flex-col md:flex-row py-12 md:py-4 lg:py-4 md:py-4">
           <div className={style.mainContent}>
             <h2 className={style.heading}>
