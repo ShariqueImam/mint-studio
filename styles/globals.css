@@ -1,11 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.is-momentumScrollable {
+  -webkit-overflow-scrolling: touch;
+}
+.is-scrollLocked {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  bottom: 0;
+}
 .font {
   font-family: "Poppins", sans-serif;
 }
-
 .font1 {
   font-family: "Montserrat", sans-serif;
 }

@@ -5,7 +5,7 @@ function MyApp({ Component, pageProps }) {
 
 
   return (
-    <div className="overflow-x-hidden" style={{ fontFamily: "Poppins,serif" }}>
+    <div className="overflow-x-hidden is-scrollLocked" style={{ fontFamily: "Poppins,serif" }}>
       <Component {...pageProps} />
     </div>
   );
