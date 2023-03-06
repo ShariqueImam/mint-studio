@@ -63,13 +63,13 @@ const Home = (props) => {
               punten toe donkerder waardoor het een mooie overloop heeft maar
               ook heel zacht en natuurlijk oogt.
             </p>
-            <div
+            {/* <div
               className={style.btnContainer}
               onClick={() => onScroll("investments")}
             >
               <button className={style.btn}>BEGIN</button>
               <AiOutlineArrowRight className={style.arrow} />
-            </div>
+            </div> */}
           </div>
           {/* adding the form */}
           <div className="w-[95%] md:w-[60%] lg:w-[45 %] bg-white rounded-md px-4 md:px-8 py-12 md:py-6 lg:py-12 flex flex-col ">
