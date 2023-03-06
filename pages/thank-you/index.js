@@ -24,9 +24,9 @@ const index = (props) => {
   const { width } = useWindowSize();
   const FeaturedBackground1 = styled.div`
     background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(${(width < 500 && "/homebg.jpg") ||
-      (width > 500 && width < 1000 && "/homebg.jpg") ||
-      (width > 1000 && "/homebg.jpg")});
+      url(${(width < 500 && "/homebg.jpeg") ||
+      (width > 500 && width < 1000 && "/homebg.jpeg") ||
+      (width > 1000 && "/homebg.jpeg")});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -50,9 +50,12 @@ const index = (props) => {
               Bedankt voor het invullen van de gegevens
             </h2>
             <section className="flex items-center justify-between w-[70%] flex-col my-5 md:my-8">
-              <p className="text-white my-4">Wil je een afspraak boeken</p>
-              <Link href='https://widget.treatwell.be/salon/mint-studio' className={style.btnContainer}>
-                <button className={style.btn}>Boek Nu</button>
+              {/* <p className="text-white my-4">Wil je een afspraak boeken</p> */}
+              <Link
+                href="https://mintstudio.vercel.app"
+                className={style.btnContainer}
+              >
+                <button className={style.btn}>Ga terug</button>
               </Link>
             </section>
           </div>

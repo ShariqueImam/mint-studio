@@ -9,7 +9,9 @@ const style = {
   wrapper: "h-[100vh] w-[100vw] flex flex-col",
   heading:
     "text-4xl md:text-5xl lg:text-6xl text-white  my-2 md:my-3 w-[100%] md:w-[80%] text-center md:text-left font-semibold",
-  para: "tracking-normal text-white text-md md:text-md my-3 md:my-8 text-center md:text-left mx-auto md:mx-0 w-[100%] md:w-[65%] font1",
+  para: "tracking-normal text-white text-md md:text-md my-3 md:my-6 text-center md:text-left mx-auto md:mx-0 w-[100%] md:w-[65%] font1",
+  para1:
+    "tracking-normal text-white text-md md:text-md my-2 md:my-1 text-center md:text-left mx-auto md:mx-0 w-[100%] md:w-[65%] font1",
   btn: " px-8 md:px-6 py-3 md:py-4 transition duration-[200ms] max-w-fit mx-auto md:mx-0 ",
   arrow: `text-xl`,
   btnContainer:
@@ -25,9 +27,9 @@ const Home = (props) => {
   const { width } = useWindowSize();
   const FeaturedBackground1 = styled.div`
     background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(${(width < 500 && "/homebg.jpg") ||
-      (width > 500 && width < 1000 && "/homebg.jpg") ||
-      (width > 1000 && "/homebg.jpg")});
+      url(${(width < 500 && "/homebg.jpeg") ||
+      (width > 500 && width < 1000 && "/homebg.jpeg") ||
+      (width > 1000 && "/homebg.jpeg")});
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -48,12 +50,18 @@ const Home = (props) => {
               be proud, be you - <span className="text-white">Mintstudio</span>
             </h2>
             <p className={style.para}>
-              Mariam is gespecialiseerd in semi permanente make-up,
-              huidverbetering en beauty behandelingen, Kathleen is
-              gespecialiseerd in (medische )pedicure, voetreflexologie en
-              facials .Sinds een paar maanden zijn we verhuisd naar ons nieuw
-              pand, waar we ons beiden zeer gelukkig voelen. We besteden veel
-              aandacht en zorg aan onze klanten tot het perfect is voor ons.
+              Met vijf jaar ervaring op zak is Mariam een deskundige op het
+              gebied van semi-permanente make-up, huidverbetering en beauty
+              behandelingen. Ze heeft in deze vakgebieden veel kennis en
+              expertise opgebouwd, waardoor ze haar cliënten met vertrouwen en
+              professionaliteit kan behandelen.
+            </p>
+            <p className={style.para1}>
+              Ombré powder brows is de meest recente trend op het gebied van
+              permanente make up voor wenkbrauwen. Bij Ombré powder brows wordt
+              de aanzet van de wenkbrauwen lichter in geschaduwd met naar de
+              punten toe donkerder waardoor het een mooie overloop heeft maar
+              ook heel zacht en natuurlijk oogt.
             </p>
             <div
               className={style.btnContainer}
@@ -66,13 +74,13 @@ const Home = (props) => {
           {/* adding the form */}
           <div className="w-[95%] md:w-[60%] lg:w-[45 %] bg-white rounded-md px-4 md:px-8 py-12 md:py-6 lg:py-12 flex flex-col ">
             <h2 className="font1 font-semibold text-center text-2xl md:text-2xl">
-              Ontvang snel een offerte
-              <span className="text-pink-700"> Vandaag </span>{" "}
+              Ontdek de beste versie van uzelf. Wij bellen u
+              <span className="text-pink-700"> terug! </span>{" "}
             </h2>
             <p className="text-gray-500 text-xs my-3 md:my-3 text-center">
-              Mint Studio is een gezellig salon waar we beide onze passie in
-              hebben gevonden. Door een gelukkig toeval zijn we samengebracht,
-              en met wij bedoelen we Mariam en Kathleen
+              Laat ons u helpen om de eerste stap te zetten naar de beste versie
+              van uzelf. Vul ons terugbelformulier in en ontdek hoe we u kunnen
+              ondersteunen op uw reis naar persoonlijke groei en welzijn.
             </p>
             <HomeForm />
           </div>
