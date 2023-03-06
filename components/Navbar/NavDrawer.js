@@ -53,7 +53,7 @@ const NavDrawer = (props) => {
         >
           {/* <Image src={""} height={1} width={1}/> */}
           <div className="mx-auto my-16">
-            <img src={"/logo.png"} height={100} width={100} />
+            <img src={"/logo.png"} height={120} width={120} />
           </div>{" "}
           {/* adding the navs */}
           {/* <ul className="flex  flex-col">
