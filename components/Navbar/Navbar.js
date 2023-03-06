@@ -16,7 +16,7 @@ const Navbar = (props) => {
     navContainer: "flex items-center justify-center",
     cartButton:
       "flex items-center justify-center mx-5 bg-gray-200 text-gray-900 px-3 py-2 text-sm rounded hover:opacity-[0.9]",
-    img: "cursor-pointer",
+    img: "cursor-pointer mx-auto mb-4",
   };
   const [Enter, setEnter] = useState(false);
   const [Item, setItem] = useState("home");
@@ -30,7 +30,7 @@ const Navbar = (props) => {
       <nav className={style.mainNav}>
         <div className={style.img}>
           <Link href="/">
-            <Image src={"/logo.png"} height={125} width={125} />
+            <Image src={"/logo.png"} height={140} width={140} />
           </Link>
         </div>
         <div className="flex items-center justify-center font1 ">
