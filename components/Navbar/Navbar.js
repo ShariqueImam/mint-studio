@@ -24,8 +24,11 @@ const Navbar = (props) => {
   const handleScroll = (val) => {
     // setItem(val);
   };
+
+
+
+
   return (
-    // install the mui first
     <div className={style.wrapper}>
       <nav className={style.mainNav}>
         <div className={style.img}>
@@ -33,7 +36,7 @@ const Navbar = (props) => {
             <Image src={"/logo.png"} height={140} width={140} />
           </Link>
         </div>
-        <div className="flex items-center justify-center font1 ">
+        <div className="flex items-center justify-center font1">
           <ul className={style.navContainer}>
             {/* <li className={style.list} onClick={() => setItem("home")}>
               HOME
@@ -65,7 +68,7 @@ const Navbar = (props) => {
         </div>
       </nav>
       <div className={style.navDrawer}>
-        <NavDrawer  />
+        <NavDrawer />
       </div>
     </div>
   );

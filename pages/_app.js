@@ -1,11 +1,14 @@
 import "../styles/globals.css";
 import React from "react";
-
+import Pixel from "../components/Pixel";
 function MyApp({ Component, pageProps }) {
-
-
   return (
-    <div className="overflow-x-hidden is-scrollLocked" style={{ fontFamily: "Poppins,serif" }}>
+    <div
+      className="overflow-x-hidden is-scrollLocked"
+      style={{ fontFamily: "Poppins,serif" }}
+    >
+      <Pixel name="FACEBOOK_PIXEL_1" />
+
       <Component {...pageProps} />
     </div>
   );
