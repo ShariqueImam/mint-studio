@@ -12,7 +12,7 @@ class MyDocument extends Document {
             content="initial-scale=1.0, width=device-width"
           />
           <link rel="icon" href="/favicon.png" />
-          <meta name="description" content=" DKSC- Holdings" />
+          <meta name="description" content=" Mintstudio" />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
           <link
