@@ -28,7 +28,7 @@ export default function Main() {
           <title> Mintstudio - Your Makeup Partner</title>
           <meta
             name="description"
-            content=" DKSC- Holdings |Real Estate Investing and Rentals"
+            content="Mintstudio - Your Makeup Partner"
           />
           <link rel="icon" href="/logo.png" />
         </Head>
