@@ -34,7 +34,7 @@ const Home = (props) => {
     background-size: cover;
     background-position: center;
     background-attachment: auto;
-    height: ${width < 550 ? "190vh" : "110vh"};
+    height: ${width < 550 ? "100vh" : "100vh"};
     width: 100vw;
   `;
   const sendEmail = (e) => {
@@ -44,8 +44,8 @@ const Home = (props) => {
     <Animator className={style.wrapper} style={{ fontFamily: "Poppins,serif" }}>
       <FeaturedBackground1 className="flex flex-col items-center">
         <Navbar />
-        <div className="flex items-center sm:items-start justify-center w-[95%] md:w-[80%] flex-col md:flex-row py-12 md:py-4 lg:py-4 md:py-4">
-          <div className={style.mainContent}>
+        <div className="flex items-center sm:items-start justify-center w-[95%] md:w-[80%] flex-col md:flex-row py-32 md:py-4 lg:py-4">
+          {/* <div className={style.mainContent}>
             <h2 className={style.heading}>
               be proud, be you - <span className="text-white">Mintstudio</span>
             </h2>
@@ -63,14 +63,7 @@ const Home = (props) => {
               punten toe donkerder waardoor het een mooie overloop heeft maar
               ook heel zacht en natuurlijk oogt.
             </p>
-            {/* <div
-              className={style.btnContainer}
-              onClick={() => onScroll("investments")}
-            >
-              <button className={style.btn}>BEGIN</button>
-              <AiOutlineArrowRight className={style.arrow} />
-            </div> */}
-          </div>
+          </div> */}
           {/* adding the form */}
           <div className="w-[95%] md:w-[60%] lg:w-[45 %] bg-white rounded-md px-4 md:px-8 py-12 md:py-6 lg:py-12 flex flex-col ">
             <h2 className="font1 font-semibold text-center text-2xl md:text-2xl">
