@@ -34,7 +34,7 @@ const Home = (props) => {
     background-size: cover;
     background-position: center;
     background-attachment: auto;
-    height: ${width < 550 ? "100vh" : "100vh"};
+    height: ${width < 550 ? "190vh" : "100vh"};
     width: 100vw;
   `;
   const sendEmail = (e) => {
