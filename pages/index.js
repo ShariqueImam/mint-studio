@@ -24,17 +24,14 @@ export default function Main() {
     }
   };
   const { width } = useWindowSize();
-  const FeaturedBackground1 = styled.div`
-    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(${(width < 500 && "/homebg.jpeg") ||
-      (width > 500 && width < 1000 && "/homebg.jpeg") ||
-      (width > 1000 && "/homebg.jpeg")});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: auto;
- 
-  `;
+  const mystyle = {
+    background:
+      'radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("/homebg.jpeg")',
+    backgroundRepeat: "no-repeat",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+    backgroundAttachment: "auto",
+  };
   return (
     <Animator>
       <div className={style.container}>
@@ -43,9 +40,9 @@ export default function Main() {
           <meta name="description" content="Mintstudio - Your Makeup Partner" />
           <link rel="icon" href="/logo.png" />
         </Head>
-        <FeaturedBackground1 className="contact flex items-center flex-col">
+        <div className="contact flex items-center flex-col" style={mystyle}>
           <Home />
-        </FeaturedBackground1>
+        </div>
       </div>
     </Animator>
   );

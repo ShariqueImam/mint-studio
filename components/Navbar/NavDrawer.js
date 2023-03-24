@@ -51,25 +51,9 @@ const NavDrawer = (props) => {
           className="h-[60vh] font flex flex-col my-12 bg-[#1c1917] items-center"
           style={{ fontFamily: "Poppins, serif" }}
         >
-          {/* <Image src={""} height={1} width={1}/> */}
           <div className="mx-auto my-16">
             <img src={"/logo.png"} height={120} width={120} />
           </div>{" "}
-          {/* adding the navs */}
-          {/* <ul className="flex  flex-col">
-            <li className={style.list} onClick={() => props.onScroll("home")}>
-              HOME
-            </li>
-            <li className={style.list} onClick={() => props.onScroll("aboutus")}>
-              ABOUT US
-            </li>
-            <li className={style.list} onClick={() => props.onScroll("services")}>
-              SERVICES
-            </li>
-            <li className={style.list} onClick={() => props.onScroll("investments")}>
-              INVESTMENTS
-            </li>
-          </ul> */}
           <div>
             <button className="mx-auto bg-white rounded text-gray-900 px-12 py-2 mt-80  cursor-pointer hover:opacity-[0.9]">
               CONTACT
@@ -86,7 +70,6 @@ const NavDrawer = (props) => {
       {["left"].map((anchor) => (
         <React.Fragment key={anchor}>
           <button
-            onClick={toggleDrawer(anchor, true)}
             className="px-2 my-1 flex items-center justify-between w-[100vw]"
           >
             <div className="w-[15%]">
