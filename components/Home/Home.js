@@ -29,9 +29,7 @@ const Home = (props) => {
       url(${(width < 500 && "/homebg.jpeg") ||
       (width > 500 && width < 1000 && "/homebg.jpeg") ||
       (width > 1000 && "/homebg.jpeg")});
- 
-    height: 100vh;
-    width: 100vw;
+
   `;
 
   return (
