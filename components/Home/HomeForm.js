@@ -73,8 +73,8 @@ const HomeForm = () => {
       <input
         type="text"
         className={style.input}
-        onChange={nameChangeHandler}
-        value={Name}
+        // onChange={nameChangeHandler}
+        // value={Name}
         // key="2"
       />
       <label htmlFor="3" className={style.label}>
@@ -84,8 +84,8 @@ const HomeForm = () => {
       <input
         type="text"
         className={style.input}
-        onChange={emailChangeHandler}
-        value={Email}
+        // onChange={emailChangeHandler}
+        // value={Email}
       />
       <label htmlFor="4" className={style.label}>
         Telefoon
@@ -93,8 +93,8 @@ const HomeForm = () => {
       <input
         type="text"
         className={style.input}
-        onChange={phoneChangeHandler}
-        value={Phone}
+        // onChange={phoneChangeHandler}
+        // value={Phone}
         // key="4"
       />
       {!isAllFilled && (
