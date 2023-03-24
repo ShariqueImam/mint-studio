@@ -29,10 +29,7 @@ const Home = (props) => {
       url(${(width < 500 && "/homebg.jpeg") ||
       (width > 500 && width < 1000 && "/homebg.jpeg") ||
       (width > 1000 && "/homebg.jpeg")});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: auto;
+ 
     height: 100vh;
     width: 100vw;
   `;
