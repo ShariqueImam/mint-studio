@@ -29,12 +29,17 @@ const Home = (props) => {
       url(${(width < 500 && "/homebg.jpeg") ||
       (width > 500 && width < 1000 && "/homebg.jpeg") ||
       (width > 1000 && "/homebg.jpeg")});
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: auto;
+    height: 100vh;
+    width: 100vw;
   `;
 
   return (
     <div className={style.wrapper} style={{ fontFamily: "Poppins,serif" }}>
-      <FeaturedBackground1 className="">
+      <div className="">
         <Navbar />
         <div className="flex items-center sm:items-start justify-center w-[95%] md:w-[80%] flex-col md:flex-row py-32 md:py-4 lg:py-4">
           {/* <div className={style.mainContent}>
@@ -67,11 +72,10 @@ const Home = (props) => {
               van uzelf. Vul ons terugbelformulier in en ontdek hoe we u kunnen
               ondersteunen op uw reis naar persoonlijke groei en welzijn.
             </p>
-            {/* {<HomeForm />} */}
-            <input type="text" name="" id="" />
+            {<HomeForm />}
           </div>
         </div>
-      </FeaturedBackground1>
+      </div>
     </div>
   );
 };
