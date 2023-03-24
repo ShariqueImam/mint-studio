@@ -70,33 +70,32 @@ const HomeForm = () => {
       <label htmlFor="2" className={style.label}>
         Naam
       </label>
-      <input
+      {/* <input
         type="text"
         className={style.input}
-        // onChange={nameChangeHandler}
-        // value={Name}
-        // key="2"
-      />
+        onChange={nameChangeHandler}
+        value={Name}
+      /> */}
       <label htmlFor="3" className={style.label}>
         Email
       </label>
 
-      <input
+      {/* <input
         type="text"
         className={style.input}
-        // onChange={emailChangeHandler}
-        // value={Email}
-      />
+        onChange={emailChangeHandler}
+        value={Email}
+      /> */}
       <label htmlFor="4" className={style.label}>
         Telefoon
       </label>
-      <input
+      {/* <input
         type="text"
         className={style.input}
-        // onChange={phoneChangeHandler}
-        // value={Phone}
-        // key="4"
-      />
+        onChange={phoneChangeHandler}
+        value={Phone}
+      /> */}
+      <input type="text" />
       {!isAllFilled && (
         <p className="text-red-500 text-sm my-3">
           * Please fill all the details above
