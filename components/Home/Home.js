@@ -65,7 +65,7 @@ const Home = (props) => {
             </p>
           </div> */}
           {/* adding the form */}
-          <div className="w-[95%] md:w-[60%] lg:w-[45 %] bg-white rounded-md px-4 md:px-8 py-12 md:py-6 lg:py-12 flex flex-col ">
+          <div className="w-[95%] md:w-[60%] lg:w-[45%] bg-white rounded-md px-4 md:px-8 py-12 md:py-6 lg:py-12 flex flex-col ">
             <h2 className="font1 font-semibold text-center text-2xl md:text-2xl">
               Ontdek de beste versie van uzelf. Wij bellen u
               <span className="text-pink-700"> terug! </span>{" "}
