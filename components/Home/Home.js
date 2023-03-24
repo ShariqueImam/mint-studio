@@ -39,7 +39,7 @@ const Home = (props) => {
 
   return (
     <div className={style.wrapper} style={{ fontFamily: "Poppins,serif" }}>
-      <div className="flex flex-col items-center">
+      <FeaturedBackground1 className="flex flex-col items-center">
         <Navbar />
         <div className="flex items-center sm:items-start justify-center w-[95%] md:w-[80%] flex-col md:flex-row py-32 md:py-4 lg:py-4">
           {/* <div className={style.mainContent}>
@@ -76,7 +76,7 @@ const Home = (props) => {
             <input type="text" name="" id="" />
           </div>
         </div>
-      </div>
+      </FeaturedBackground1>
     </div>
   );
 };
