@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Navbar from "../Navbar/Navbar";
 import useWindowSize from "../../hooks/useWindowSize";
-import { AiOutlineArrowRight } from "react-icons/ai";
 import styled from "styled-components";
 import Animator from "../UI/Animator";
 import HomeForm from "./HomeForm";
 const style = {
-  wrapper: "h-[100vh] w-[100vw] flex flex-col",
+  wrapper: "w-[100vw] flex flex-col",
   heading:
     "text-4xl md:text-5xl lg:text-6xl text-white  my-2 md:my-3 w-[100%] md:w-[80%] text-center md:text-left font-semibold",
   para: "tracking-normal text-white text-md md:text-md my-3 md:my-6 text-center md:text-left mx-auto md:mx-0 w-[100%] md:w-[65%] font1",

@@ -30,7 +30,7 @@ export default function Main() {
           <link rel="icon" href="/logo.png" />
         </Head>
         <div className="contact">
-          {/* <Home /> */}
+          <Home />
         </div>
         <input type="text" />
       </div>
