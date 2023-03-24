@@ -75,7 +75,7 @@ const Home = (props) => {
               van uzelf. Vul ons terugbelformulier in en ontdek hoe we u kunnen
               ondersteunen op uw reis naar persoonlijke groei en welzijn.
             </p>
-            <HomeForm />
+            {<HomeForm />}
           </div>
         </div>
       </FeaturedBackground1>
