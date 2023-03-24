@@ -25,13 +25,13 @@ const HomeForm = () => {
   const router = useRouter();
 
   const nameChangeHandler = (e) => {
-    setName(e.target.value);
+    // setName(e.target.value);
   };
   const emailChangeHandler = (e) => {
-    setEmail(e.target.value);
+    // setEmail(e.target.value);
   };
   const phoneChangeHandler = (e) => {
-    setPhone(e.target.value);
+    // setPhone(e.target.value);
   };
   const tokenWithWriteAccess =
     "skmhtHPLjRsHi6wvZALxgdAGzGX90jKTWTegYSBRnEEPXsfojk255N8f69hhqkRpw8yjoCtgkgscwu88n8LXaP60Fum8gspkNBONEN0FCRRc2qdwTkI6OugZX8v9HE9fIbx3QDdz3UUga56uf1rFZflWBMQeeu7vmmgLx0K9HlMimZHQ9CHn";
