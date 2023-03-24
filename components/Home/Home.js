@@ -24,18 +24,7 @@ const style = {
 
 const Home = (props) => {
   const { width } = useWindowSize();
-  const FeaturedBackground1 = styled.div`
-    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-      url(${(width < 500 && "/homebg.jpeg") ||
-      (width > 500 && width < 1000 && "/homebg.jpeg") ||
-      (width > 1000 && "/homebg.jpeg")});
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: auto;
-    height: 100vh;
-    width: 100vw;
-  `;
+
 
   return (
     <div className={style.wrapper} style={{ fontFamily: "Poppins,serif" }}>

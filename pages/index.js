@@ -33,8 +33,7 @@ export default function Main() {
     background-size: cover;
     background-position: center;
     background-attachment: auto;
-    height: 100vh;
-    width: 100vw;
+ 
   `;
   return (
     <Animator>
