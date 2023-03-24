@@ -7,6 +7,7 @@ import Footer from "../components/Footer/Footer";
 import Animator from "../components/UI/Animator";
 import { scroller } from "react-scroll";
 import About from "../components/About/About";
+import styled from "styled-components";
 const style = {
   wrapper: "",
 };
@@ -21,6 +22,18 @@ export default function Main() {
       });
     }
   };
+  const FeaturedBackground1 = styled.div`
+    background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      url(${(width < 500 && "/homebg.jpeg") ||
+      (width > 500 && width < 1000 && "/homebg.jpeg") ||
+      (width > 1000 && "/homebg.jpeg")});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: auto;
+    height: 100vh;
+    width: 100vw;
+  `;
   return (
     <Animator>
       <div className={style.container}>
@@ -29,10 +42,9 @@ export default function Main() {
           <meta name="description" content="Mintstudio - Your Makeup Partner" />
           <link rel="icon" href="/logo.png" />
         </Head>
-        <div className="contact">
+        <FeaturedBackground1 className="contact">
           <Home />
-        </div>
-        <input type="text" />
+        </FeaturedBackground1>
       </div>
     </Animator>
   );
