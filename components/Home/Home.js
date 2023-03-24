@@ -30,7 +30,7 @@ const Home = (props) => {
     <div className={style.wrapper} style={{ fontFamily: "Poppins,serif" }}>
       <div className="">
         <Navbar />
-        <div className="flex items-center sm:items-start justify-center w-[95%] md:w-[80%] flex-col md:flex-row py-32 md:py-4 lg:py-4">
+        <div className="flex items-center sm:items-start justify-center w-[100%] md:w-[80%] flex-col md:flex-row py-32 md:py-4 lg:py-4">
           {/* <div className={style.mainContent}>
             <h2 className={style.heading}>
               be proud, be you - <span className="text-white">Mintstudio</span>
