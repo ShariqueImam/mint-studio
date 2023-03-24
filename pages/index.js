@@ -8,6 +8,7 @@ import Animator from "../components/UI/Animator";
 import { scroller } from "react-scroll";
 import About from "../components/About/About";
 import styled from "styled-components";
+import useWindowSize from "../hooks/useWindowSize";
 const style = {
   wrapper: "",
 };
@@ -22,6 +23,7 @@ export default function Main() {
       });
     }
   };
+  const { width } = useWindowSize();
   const FeaturedBackground1 = styled.div`
     background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
       url(${(width < 500 && "/homebg.jpeg") ||
@@ -42,11 +44,10 @@ export default function Main() {
           <meta name="description" content="Mintstudio - Your Makeup Partner" />
           <link rel="icon" href="/logo.png" />
         </Head>
-        <FeaturedBackground1 className="contact">
+        <FeaturedBackground1 className="contact flex items-center flex-col">
           <Home />
         </FeaturedBackground1>
       </div>
     </Animator>
   );
 }
-
