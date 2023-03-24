@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useState } from "react";
 import Home from "../components/Home/Home";
-import Treatment from '../components/Treatment/Treatment'
+import Treatment from "../components/Treatment/Treatment";
 import Explain from "../components/Explain/Explain";
 import Footer from "../components/Footer/Footer";
 import Animator from "../components/UI/Animator";
@@ -26,31 +26,15 @@ export default function Main() {
       <div className={style.container}>
         <Head>
           <title> Mintstudio - Your Makeup Partner</title>
-          <meta
-            name="description"
-            content="Mintstudio - Your Makeup Partner"
-          />
+          <meta name="description" content="Mintstudio - Your Makeup Partner" />
           <link rel="icon" href="/logo.png" />
         </Head>
         <div className="contact">
-          <Home />
+          {/* <Home /> */}
         </div>
-        <div className="aboutus">
-          {/* <About onScroll={onScroll} /> */}
-        </div>
-        <div className="services">
-          {/* <Treatment /> */}
-        </div>
-        <div className="why">
-          {/* <Explain /> */}
-        </div>
-        {/* <Footer onScroll={onScroll} /> */}
+        <input type="text" />
       </div>
     </Animator>
   );
 }
-export async function getStaticProps(context) {
-  return {
-    props: {}, // will be passed to the page component as props
-  };
-}
+
