@@ -40,7 +40,10 @@ export default function Main() {
           <meta name="description" content="Mintstudio - Your Makeup Partner" />
           <link rel="icon" href="/logo.png" />
         </Head>
-        <div className="contact flex items-center flex-col" style={mystyle}>
+        <div
+          className="contact flex items-center flex-col min-h-[100vh]"
+          style={mystyle}
+        >
           <Home />
         </div>
       </div>
