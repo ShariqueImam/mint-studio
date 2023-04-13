@@ -1,71 +1,55 @@
-import React, { useState } from "react";
-import Navbar from "../Navbar/Navbar";
-import useWindowSize from "../../hooks/useWindowSize";
-import styled from "styled-components";
-import Animator from "../UI/Animator";
-import HomeForm from "./HomeForm";
+import React from 'react'
+import styled from 'styled-components'
+import Navbar from '../Navbar/Navbar'
+import HomeContent from './HomeContent'
+import useWindowSize from '../hooks/windowSize'
+import { motion } from 'framer-motion'
+
 const style = {
-  wrapper: "w-[100vw] flex flex-col",
-  heading:
-    "text-4xl md:text-5xl lg:text-6xl text-white  my-2 md:my-3 w-[100%] md:w-[80%] text-center md:text-left font-semibold",
-  para: "tracking-normal text-white text-md md:text-md my-3 md:my-6 text-center md:text-left mx-auto md:mx-0 w-[100%] md:w-[65%] font1",
-  para1:
-    "tracking-normal text-white text-md md:text-md my-2 md:my-1 text-center md:text-left mx-auto md:mx-0 w-[100%] md:w-[65%] font1",
-  btn: " px-8 md:px-6 py-3 md:py-4 transition duration-[200ms] max-w-fit mx-auto md:mx-0 ",
-  arrow: `text-xl`,
-  btnContainer:
-    "cursor-pointer hover:opacity-[0.9]  mx-auto md:mx-0 my-2 flex items-center justify-start bg-white   text-gray-900  px-4",
-  mainContent:
-    "w-[100%] md:w-[65%] h-[80%] flex flex-col items-start justify-center  mx-auto font1 my-16 md:my-7",
-  input:
-    "mb-3 md:mb-4 border-b-2 border-stone-500 w-[100%] ring-none outline-none",
-  label: "mt-3 md:mt-4",
-};
+  wrapper: '',
+}
+
+const variantsContainer = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      type: 'spring',
+      delay: 0.5,
+      when: 'beforeChildren', // make this animation to end before children animation occurs
+    },
+  },
+}
 
 const Home = (props) => {
-  const { width } = useWindowSize();
-
-
+  const screenWidth = useWindowSize()
+  const HomeBackground = styled.div`
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)),
+      url('/bglarge.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: auto;
+    width: 100vw;
+    height: 100vh;
+  `
+  const onScroll = (val) => {
+    props.onScroll(val)
+  }
   return (
-    <div className={style.wrapper} style={{ fontFamily: "Poppins,serif" }}>
-      <div className="">
-        <Navbar />
-        <div className="flex items-center  justify-center w-[100%] md:w-[80%] flex-col md:flex-row py-32 md:py-4 lg:py-4 mx-auto">
-          {/* <div className={style.mainContent}>
-            <h2 className={style.heading}>
-              be proud, be you - <span className="text-white">Mintstudio</span>
-            </h2>
-            <p className={style.para}>
-              Met vijf jaar ervaring op zak is Mariam een deskundige op het
-              gebied van semi-permanente make-up, huidverbetering en beauty
-              behandelingen. Ze heeft in deze vakgebieden veel kennis en
-              expertise opgebouwd, waardoor ze haar cliënten met vertrouwen en
-              professionaliteit kan behandelen.
-            </p>
-            <p className={style.para1}>
-              Ombré powder brows is de meest recente trend op het gebied van
-              permanente make up voor wenkbrauwen. Bij Ombré powder brows wordt
-              de aanzet van de wenkbrauwen lichter in geschaduwd met naar de
-              punten toe donkerder waardoor het een mooie overloop heeft maar
-              ook heel zacht en natuurlijk oogt.
-            </p>
-          </div> */}
-          {/* adding the form */}
-          <div className="w-[95%] md:w-[60%] lg:w-[45%] bg-white rounded-md px-4 md:px-8 py-12 md:py-6 lg:py-12 flex flex-col ">
-            <h2 className="font1 font-semibold text-center text-2xl md:text-2xl">
-              Ontdek de beste versie van uzelf. Wij bellen u
-              <span className="text-pink-700"> terug! </span>{" "}
-            </h2>
-            <p className="text-gray-500 text-xs my-3 md:my-3 text-center">
-              Laat ons u helpen om de eerste stap te zetten naar de beste versie
-              van uzelf. Vul ons terugbelformulier in en ontdek hoe we u kunnen
-              ondersteunen op uw reis naar persoonlijke groei en welzijn.
-            </p>
-            {<HomeForm />}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-export default Home;
+    <motion.div variants={variantsContainer} initial="hidden" animate="visible">
+      <HomeBackground className={style.wrapper}>
+        {/* <Image src="/img/home.jpg" width="100" height="100" layout='fill' /> */}
+        {/* navbar */}
+        <Navbar onScroll={onScroll} />
+
+        {/* Home content */}
+        <HomeContent onScroll={onScroll}/>
+      </HomeBackground>
+    </motion.div>
+  )
+}
+
+export default Home

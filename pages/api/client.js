@@ -1,5 +1,5 @@
-import client from '@sanity/client';
+import client from "@sanity/client";
 export default client({
-    projectId: 'nxg2q82s',
-    dataset: 'production',
-})
+  projectId: "7mrl0pii",
+  dataset: "production",
+});

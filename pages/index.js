@@ -1,52 +1,59 @@
-import Head from "next/head";
-import React, { useState } from "react";
-import Home from "../components/Home/Home";
-import Treatment from "../components/Treatment/Treatment";
-import Explain from "../components/Explain/Explain";
-import Footer from "../components/Footer/Footer";
-import Animator from "../components/UI/Animator";
-import { scroller } from "react-scroll";
-import About from "../components/About/About";
-import styled from "styled-components";
-import useWindowSize from "../hooks/useWindowSize";
-const style = {
-  wrapper: "",
-};
-export default function Main() {
+import Home from '../components/Home/Home'
+import Offer from '../components/Offer/Offer'
+import Menu from '../components/Menu/Menu'
+import Booking from '../components/Booking/Booking'
+import Event from '../components/Event/Event'
+import Contact from '../components/Contact/Contact'
+import Footer from '../components/Footer/Footer'
+import { scroller } from 'react-scroll'
+const App = () => {
+
+
+
+
   const onScroll = (value) => {
-    if (typeof window !== "undefined") {
-      // browser code
-      scroller.scrollTo(`${value}`, {
-        duration: 900,
-        delay: 0,
-        smooth: "easeInOutQuart",
-      });
-    }
-  };
-  const { width } = useWindowSize();
-  const mystyle = {
-    background:
-      'radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),url("/homebg.jpeg")',
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-    backgroundAttachment: "auto",
-  };
+    scroller.scrollTo(`${value}`, {
+      duration: 900,
+      delay: 0,
+      smooth: 'easeInOutQuart',
+    })
+  }
+
   return (
-    <Animator>
-      <div className={style.container}>
-        <Head>
-          <title> Mintstudio - Your Makeup Partner</title>
-          <meta name="description" content="Mintstudio - Your Makeup Partner" />
-          <link rel="icon" href="/logo.png" />
-        </Head>
-        <div
-          className="contact flex items-center flex-col min-h-[100vh]"
-          style={mystyle}
-        >
-          <Home />
-        </div>
+    <div
+      className="overflow-x-hidden bg-[#FDFDFC] "
+      style={{ fontDisplay: 'swap' }}
+    >
+      <div className="home flex">
+        <Home onScroll={onScroll} />
       </div>
-    </Animator>
-  );
+      <div className="about">
+        <Offer />
+      </div>
+      {/* <div className="menu">
+        <Menu />
+      </div> */}
+      {/* <div className="booking">
+        <Booking />
+      </div> */}
+      {/* <div className="services">
+        <Event />
+      </div> */}
+      <div className="contact">
+        <Contact />
+      </div>
+      <Footer />
+    </div>
+  )
+}
+
+export default App
+
+// this will render the page at the build time
+// providing much better load times
+export async function getStaticProps(context) {
+  return {
+    // the data in the props will be passed to the above function at the build time
+    props: {}, // will be passed to the page component as props
+  }
 }

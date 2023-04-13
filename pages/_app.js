@@ -1,23 +1,20 @@
-import "../styles/globals.css";
-import React from "react";
-import Pixel from "../components/Pixel";
+import '../styles/globals.css'
+import Head from "next/head";
 function MyApp({ Component, pageProps }) {
   return (
-    <div
-      className="overflow-x-hidden is-scrollLocked"
-      style={{ fontFamily: "Poppins,serif" }}
-    >
-      <Pixel name="FACEBOOK_PIXEL_1" />
+    <>
+      <Head>
+        <title  key={'title'}>Ducky's | Restaurant</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta
+      name="description"
+      content="A website restaurant for online presense"
+    />
 
+      </Head>
       <Component {...pageProps} />
-    </div>
-  );
+    </>
+  )
 }
 
-export default MyApp;
-// export async function getStaticProps(context) {
-//   return {
-//     // the data in the props will be passed to the above function at the build time
-//     props: {}, // will be passed to the page component as props
-//   }
-// }
+export default MyApp
